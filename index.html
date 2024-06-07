@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ?-----------------------<head>：头部部分，包含了文档的元数据和引用的外部资源。----------------------- -->
+
+<head>
+  <meta charset="utf-8">
+  <!-- 页面的描述元数据 -->
+  <meta name="description"
+    content="Optimization-Based Spatiotemporal Trajectory Planning with Behavior Cells for Autonomous Driving">
+  <!-- 页面的关键字元数据 -->
+  <meta name="keywords"
+    content="Autonomous urban driving, trajectory planning, driving behavior, optimization, behavior cells">
+  <!-- 视口设置，使页面在移动设备上正确显示 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- !页面标题 -->
+  <title>Optimization-Based Spatiotemporal Trajectory Planning with Behavior Cells for Autonomous Driving</title>
+
+  <!-- 链接到 Google Fonts 字体 -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans,Noto+Sans,Castoro" rel="stylesheet">
+
+  <!-- 链接到各种样式表文件 -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- 引用外部 JavaScript 文件 -->
+  <!-- 引入 jQuery 库 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- 引入 Font Awesome 图标库 -->
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <!-- 引入 Bulma Carousel 插件 -->
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <!-- 引入 Bulma Slider 插件 -->
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <!-- 引入自定义的 JavaScript 文件 -->
+  <script src="./static/js/index.js"></script>
+  <!-- 引入MathJax 用于显示公式 -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<!-- ?-----------------------网页的主体部分----------------------- -->
+
+<body>
+  <!-- &-----------------------题目,作者信息和按钮----------------------- -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-fullhd">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- !设置题目 -->
+            <h1 class="title is-1 publication-title">Optimization-Based Spatiotemporal Trajectory Planning with
+              <span style="color: blue;">Behavior Cells</span> for Autonomous Driving
+            </h1>
+            <!-- <h3 class="title is-4 conference-authors">IEEE Transactions on Robotics</h3> -->
+            <!-- !作者列表 -->
+            <!-- TODO -->
+            <!-- div 块级元素 -->
+            <div class="is-size-5 publication-authors">
+              <!-- *作者信息 -->
+              <!-- target="_blank":在新标签打开链接 -->
+              <!-- href="https://lshasd123.github.io/Personal-Webpage/": 作者的网页链接 -->
+              <!-- <sup>1</sup>:上角标1 -->
+              <span class="author-block">
+                <a target="_blank" href="https://lshasd123.github.io/Personal-Webpage/">Shihao Li</a><sup>1</sup>,
+                <a target="_blank" href="https://wenshuowang.github.io/">Wenshuo Wang</a><sup>1</sup>,
+                Zhide Zhang<sup>2</sup>,
+                Xin Xia<sup>2</sup>,
+                Boyang Wang<sup>1</sup>,
+                <a target="_blank" href="https://scholar.google.com.sg/citations?user=0Jv8_7MAAAAJ&hl=en">Chao Lu</a><sup>1</sup>,
+                Haiou Liu<sup>1</sup>,
+              </span>
+
+
+            </div>
+
+            <!-- !单位信息 -->
+            <!-- TODO -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Beijing Institute of Technology</span>
+              <br>
+              <span class="author-block"><sup>2</sup>GAC R&D Center</span>
+            </div>
+
+            <!-- !按钮 -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- *PDF Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper (Under Review)</span>
+                  </a>
+                </span>
+
+                <!-- *Video Link. -->
+                <!-- TODO -->
+                <span class="link-block">
+                  <a href="https://drive.google.com/drive/folders/1mgd8F_vOlWPc0YW26oVE8rjzzeo57XtC?usp=drive_link" download class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-download"></i>
+                    </span>
+                    <span>Download</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- &-----------------------第一个大视频----------------------- -->
+  <!-- TODO -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <div class="rows">
+        <div class="container">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-two-thirds">
+              <div class="publication-video">
+                <iframe src="https://drive.google.com/file/d/1CPgelpbldk4Y9njk4xXo8RHRPno53_eE/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- &-----------------------摘要和关键词----------------------- -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <!-- !摘要 -->
+            <p>
+              Achieving safe and executable trajectory planning in traffic scenarios necessitates considering vital
+              environmental elements, ego behaviors, and vehicle kinematics, which poses challenges of real-time
+              performance and convergence for optimization-based methods. To address these issues, we propose an
+              optimization-based trajectory planning framework that handles environmental elements and provides
+              heuristic behavior constraints at the spatiotemporal drivable domain level, followed by progressively
+              optimization to achieve fast and stable convergence. Specifically, considering vehicle motion capabilities
+              and the tactical decisions for various environmental elements, we first partition the spatiotemporal
+              domain into modular drivable cells with behavior semantics, refer to Behavior Cells (BCs). All feasible
+              candidate behaviors are then rapidly enumerated through BCs combinations. Subsequently, the Finite-Horizon
+              Markov Decision Process (FHMDP) is utilized to model and evaluate each behavior in the spatiotemporal
+              drivable domain, with the optimal BCs combination serving as heuristic constraints. Finally, we utilize a
+              dynamic two-stage optimization approach to progressively satisfy the planning-related requirements,
+              generating trajectories within the selected BCs combination with fast convergence. Simulation in various
+              typical traffic demonstrate that the proposed method showcases stable reliability and real-time
+              performance compared to the baselines under different traffic densities. On-road experiments further
+              validate the effectiveness of the proposed method in real-world traffic scenarios.
+            </p>
+            <!-- !关键词 -->
+            <p>
+              <strong>Keywords: </strong>Autonomous Urban Driving, Trajectory Planning, Driving Behavior, Optimization,
+              Behavior Cells
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+    </div>
+  </section>
+
+  <!-- &-----------------------方法----------------------- -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <div class="rows">
+
+        <div class="rows is-centered ">
+          <div class="row is-full-width">
+            <!-- !方法题目 -->
+            <h2 class="title">Method Overview</h2>
+
+            <!-- !方法子标题 -->
+            <!-- <h3 class="title is-4">Method Overview</h3> -->
+            <div class="content has-text-justified">
+              <!-- !子标题内容 -->
+              <p>
+                In this paper, we propose a novel optimization-based trajectory planning framework that directly handles environmental
+                elements and provides heuristic behavior constraints at the spatiotemporal drivable domain level, then efficiently and
+                robustly generates trajectories for specified behaviors through progressive optimization. Firstly, considering the tactical decision patterns for various environmental elements, we divide
+                the spatiotemporal drivable domain of the ego vehicle into different spatiotemporal domain cells, referred to as
+                Behavior Cells (BCs). By combining BCs, we rapidly enumerate a finite set of feasible candidate behaviors. Since BCs
+                simultaneously consider the vehicle's tactical decisions regarding environmental elements and its motion capabilities,
+                behaviors represented by BCs combinations not only can provide collision-free constraints for optimization but also
+                contain the concrete representation of drivability performance. This brings two benefits: on one hand, unreasonable
+                behaviors can be quickly filtered out based on the characteristics of the spatiotemporal drivable domains; on the other
+                hand, it allows us to evaluate and select behaviors directly at the spatiotemporal drivable domain level, enabling to
+                robustly and efficiently provide feasible behavior guidance for trajectory optimization. Finally, we propose a dynamic
+                two-stage optimization algorithm, leveraging a mixed-integer quadratic programming (MIQP) stage and a nonlinear
+                programming (NLP) stage, to progressively satisfy requirements such as kinematics, smoothness, and safety, achieving
+                high efficiency and convergence rates in trajectory generation within the selected BCs combinations. We validate our
+                algorithm in various simulated and real-world urban traffic scenarios. The results demonstrate that our framework can
+                robustly and efficiently generate high-quality trajectories in different traffic densities.
+              </p>
+            </div>
+
+            </br>
+            </br>
+
+            <!-- !图片 -->
+            <div class="container">
+              <!-- !图片信息 -->
+              <div class="columns is-vcentered  is-centered">
+                <img src="static/images/Process Flow Diagram.jpg" alt="intro_figure_overall_architecture"
+                  style="width: 97%; height: auto;">
+              </div>
+              <!-- !图题信息 -->
+              <div class="content has-text-justified">
+                <p style="font-size: smaller;">
+                  Overview of the proposed method. (a) Considering the vehicle's motion capabilities, the
+                  spatiotemporal domain is
+                  partitioned into different modularized drivable domains with behavior semantics, referred to as BCs,
+                  \(\mathfrak{B}^{{\pi},i}\),
+                  to represent the tactical decisions for various environmental elements on different lanes \(\pi \in
+                  \{\mathsf{l},\mathsf{c},\mathsf{r}\}\).
+                  (b) By combining the topologically adjacent BCs, all feasible behaviors and their corresponding
+                  spatiotemporal drivable domains
+                  \(\mathfrak{C}^{i}\) are synchronously enumerated. (c) Each behavior is modeled and evaluated using
+                  the FHMDP at the spatiotemporal
+                  drivable domain level, and the optimal behavior is provided as heuristic behavioral constraints for
+                  trajectory generation.
+                  (d) Trajectories are generated progressively within the spatiotemporal drivable domain of the selected
+                  behavior through a MIQP
+                  and a NLP stage.
+                </p>
+              </div>
+            </div>
+
+            </br>
+            </br>
+
+            <!-- &-----------------------实验----------------------- -->
+            <h2 class="title">RESULTS</h2>
+            <!-- &-----------------------仿真----------------------- -->
+            <h3 class="title is-4">Simulations</h3>
+            <!-- !左右栏的形式的内容 -->
+            <p class="content has-text-justified">
+              <img src="static/images/Simulation.png" class="interpolation-image" width="500" align="right"
+                style="margin: 0% 0% 0% 6% " alt="Interpolate start reference image." />
+              We developed a proprietary simulator based on the CommonRoad benchmark to
+              conduct the experiments. The simulation scenarios were derived from publicly released datasets such as
+              NGSIM, OpenStreetMaps (OSM), and partially hand-crafted datasets. To validate the effectiveness and
+              generalizability of our method, our simulation tests were conducted in 8 typical urban driving scenario categories including on-ramp merging,
+              other vehicle merging, static obstacle avoiding, pedestrian crossing, oncoming traffic,
+              unsignalized intersections, signalized intersections, roundabouts.
+            </p>
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <!-- !横排视频 -->
+            <!-- *第一排 -->
+            <!-- 视频 -->
+            <div class="rows">
+              <div class="columns">
+                <div class="column column-video" style="margin-right: 10px;">
+                  <iframe src="https://drive.google.com/file/d/1mWweu4kgnzXtJXGjryQbFZl9dKwYdanT/preview"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="column column-video" style="margin-right: 10px;">
+                  <iframe src="https://drive.google.com/file/d/1r4kh75agFBvQFid3yXfXgrn02l852WzC/preview"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="column column-video" style="margin-right: 10px;">
+                  <iframe src="https://drive.google.com/file/d/1eY1Idn5fiOnuv0vO5OyA8jxt4IbX6X9b/preview"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+
+            <!-- 标题 -->
+            <div class="rows">
+              <div class="columns">
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px; margin-right: 10px;">Ramp Merging</h4>
+                </div>
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px; margin-right: 10px;">Other Vehicles Converge</h4>
+                </div>
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px; margin-right: 10px;">Static Obstacle Avoiding</h4>
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+
+            <!-- *第二排 -->
+            <!-- 视频 -->
+            <div class="rows">
+              <div class="columns">
+                <div class="column column-video" style="margin-right: 10px;">
+                  <iframe src="https://drive.google.com/file/d/1QgZVGebkbS5KC_94UECSsIfsN9M2z_Zu/preview"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="column column-video" style="margin-right: 10px;">
+                  <iframe src="https://drive.google.com/file/d/1yxS3HK0QiLOKkZDzWTkOlB0GF89W2y0e/preview"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="column column-video" style="margin-right: 10px;">
+                  <iframe src="https://drive.google.com/file/d/19p1ZNk1kveASMn2b25d0i2JF-SULmI9L/preview"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+
+            <!-- 标题 -->
+            <div class="rows">
+              <div class="columns">
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px; margin-right: 10px;">Oncoming Traffic</h4>
+                </div>
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px; margin-right: 10px;">Pedestrian Crossing</h4>
+                </div>
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px; margin-right: 10px;">Unsignalized Intersections<sup>1</sup></h4>
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+
+            <!-- *第三排 -->
+            <!-- 视频 -->
+            <div class="rows">
+              <div class="columns">
+                <div class="column column-video" style="margin-right: 10px;">
+                  <iframe src="https://drive.google.com/file/d/1ELdj6UXWqlx2Ub64wcHRwbnkmK0hW7CL/preview"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="column column-video" style="margin-right: 10px;">
+                  <iframe src="https://drive.google.com/file/d/1IlWatrC59aaW0sAxx3M5TKXiqNrM3oR5/preview"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="column column-video" style="margin-right: 10px;">
+                  <iframe src="https://drive.google.com/file/d/1FtPJ4ocDZr4_Q4U4Egapq5c0Maby6qsD/preview"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+
+            <!-- 标题 -->
+            <div class="rows">
+              <div class="columns">
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px; margin-right: 10px;">Signalized Intersection<sup>1</sup></h4>
+                </div>
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px; margin-right: 10px;">Roundabout</h4>
+                </div>
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px; margin-right: 10px;">Dense Road Section</h4>
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+
+            <!-- *第四排 -->
+            <!-- 视频 -->
+            <div class="rows">
+              <div class="columns">
+                <div class="column column-video" style="margin-right: 10px;">
+                  <iframe src="https://drive.google.com/file/d/1Ldfg0lgL67mvyzf36OxM6cOiJv0AS1u9/preview"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="column column-video" style="margin-right: 10px;">
+                  <iframe src="https://drive.google.com/file/d/1zSLVsyi2TCouJK-vcRn4PT3wMY9D9J74/preview"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="column column-video" style="margin-right: 10px;">
+                  <iframe src="https://drive.google.com/file/d/1C_KJXdjW2Qlf1iSju6VKW-q3ZKVCksYH/preview"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+
+            <!-- 标题 -->
+            <div class="rows">
+              <div class="columns">
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px; margin-right: 10px;">T-intersection</h4>
+                </div>
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px; margin-right: 10px;">Unsignalized Intersections<sup>2</sup></h4>
+                </div>
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px; margin-right: 10px;">Signalized Intersection<sup>2</sup></h4>
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+
+            <!-- !横排视频带列表题目 -->
+            <!-- <div class="rows">
+              <div class="columns">
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px"><span style="color: green;">CVaR-Dyn
+                      (proposed)</span></h4>
+                  <div style="text-align:center;">
+                    <ol style="text-align: left; max-width: 100%; display: inline-block;">
+                      <li><b>Best time-to-goal and success rate</b></li>
+                      <li>Risk tolerance alpha = 0.8</li>
+                      <li>The robot preemptively turned early to go through the shortcut. </li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px">CVaR-Cost</h4>
+                  <div style="text-align:center;">
+                    <ol style="text-align: left; max-width: 100%; display: inline-block;">
+                      <li>Risk tolerance alpha = 1.0</li>
+                      <li>Conservative. The robot consistently took the safer detours.</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="column has-text-centered">
+                  <h4 class="subtitle" style="margin-bottom: 10px">Baseline</h4>
+                  <div style="text-align:center;">
+                    <ol style="text-align: left; max-width: 100%; display: inline-block;">
+                      <li>Soft vegetation penalty = 10</li>
+                      <li>The robot suffered from understeering and collided with obstacles.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- &-----------------------实验----------------------- -->
+            <h3 class="title is-4">Experiments</h3>
+            <!-- !左右栏的形式的内容 -->
+            <p class="content has-text-justified">
+              <img src="static/images/ADIGO.png" class="interpolation-image" width="500" align="right"
+                style="margin: 0% 0% 0% 6% " alt="Interpolate start reference image." />
+                The experiments rely on the L4-level autonomous driving vehicle, ADIGO PILOT, developed by GAC Group (see in the right
+                figture). ADIGO PILOT is equipped with a sensing suite,including eight cameras, four solid-state lidars, two rotating
+                lidars, six
+                radars, and a fusion positioning system. We integrated the proposed framework into ADIGO PILOT and calculated the
+                trajectory in real-world traffic scenarios based on the perception results from the onboard sensor suites. To
+                demonstrate the effectiveness, flexibility, and robustness of the
+                proposed method, we provide two representative cases to illustrate the performance of
+                our algorithm.
+            </p>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <!-- !横排视频 -->
+            <!-- *第一排 -->
+            <!-- 视频 -->
+            <div class="rows">
+              <div class="column column-video">
+                <iframe src="https://drive.google.com/file/d/1cW8wy6skLaBx63q2w9YreGsnN53PeoSR/preview"
+                  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+            </div>
+
+            <!-- 标题 -->
+            <div class="rows">
+              <div class="column has-text-centered">
+                <!-- 图片 -->
+                <img src="static/images/Legend1.png" class="interpolation-image" alt="Interpolate start reference image." />
+                <h4 class="subtitle" style="margin-bottom: 10px; margin-right: 10px;">Traveling with Illegal Parking Vehicles and Crossing Pedestrain</h4>
+              </div>
+            </div>
+            <br />
+            <br />
+
+            <!-- *第二排 -->
+            <!-- 视频 -->
+            <div class="rows">
+              <div class="column column-video" style="margin-right: 10px;">
+                <iframe src="https://drive.google.com/file/d/1uADnfoOY7jr3YKv_wYy1o4sArkPAuRtd/preview"
+                  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+            </div>
+
+            <!-- 标题 -->
+            <div class="rows">
+              <div class="column has-text-centered">
+                <img src="static/images/Legend2.png" class="interpolation-image" alt="Interpolate start reference image." />
+                <h4 class="subtitle" style="margin-bottom: 10px; margin-right: 10px;">Lane Changing While Another Vehicle Merging</h4>
+              </div>
+            </div>
+            <br />
+            <br />
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- &-----------------------引用----------------------- -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-widescreen content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{cai2023evora,
+      title={EVORA: Deep EVidential Traversability Learning for Risk-Aware Off-Road Autonomy},
+      author={Cai, Xiaoyi and Ancha, Siddharth and Sharma, Lakshay and Osteen, Philip R. and Bucher, Bernadette and Phillips, Stephen and Wang, Jiuguang and Everett, Michael and Roy, Nicholas and How, Jonathan P.},
+      journal={arXiv preprint arXiv:2311.06234},
+      year={2023}
+    }</code></pre>
+    </div>
+  </section> -->
+
+
+  <!-- &-----------------------页脚----------------------- -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <p>
+              Website template from <a href="https://xiaoyi-cai.github.io/evora/">EVORA</a> and <a
+                href="https://peract.github.io/">PerAct</a> under a Creative Commons Attribution-ShareAlike 4.0
+              International License.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
